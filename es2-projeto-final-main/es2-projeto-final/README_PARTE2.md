@@ -1,9 +1,6 @@
 # Projeto Final ES2 — Parte 2
 
-A Parte 2 trabalha sobre o mesmo fork do flaskbb da Parte 1 e cobre
-os temas das Unidades **U3 (Refactoring)**, **U4 (Refactoring: Code
-Smells)** e **U6 (Código Legível)**. Toda a suíte de testes existente
-**e os novos testes da Parte 1** devem continuar verdes ao final.
+A Parte 2 trabalha sobre o mesmo fork do flaskbb da Parte 1 e cobre os temas das Unidades **U3 (Refactoring)**, **U4 (Refactoring: Code Smells)** e **U6 (Código Legível)**. Toda a suíte de testes existente **e os novos testes da Parte 1** devem continuar verdes ao final.
 
 Sugestão de hotspots para refatorar (escolha um como alvo principal):
 
@@ -11,8 +8,7 @@ Sugestão de hotspots para refatorar (escolha um como alvo principal):
 - `flaskbb/forum/views.py` (~1327 LOCs)
 - `flaskbb/management/views.py` (~1499 LOCs)
 
-O escopo das tarefas deve permanecer em `flaskbb/forum/`,
-`flaskbb/management/` ou `flaskbb/user/`.
+O escopo das tarefas deve permanecer em `flaskbb/forum/`,`flaskbb/management/` ou `flaskbb/user/`.
 
 ---
 
@@ -20,13 +16,9 @@ O escopo das tarefas deve permanecer em `flaskbb/forum/`,
 
 ### Tarefa 2.1 — Catálogo de code smells (2,0 pontos)
 
-Escolha um arquivo de hotspot dentro do escopo permitido e produza
-um catálogo, em `parte2/CODE_SMELLS.md`, com **pelo
-menos 6 smells distintos** encontrados. Para cada smell:
+Escolha um arquivo de hotspot dentro do escopo permitido e produza um catálogo, em `parte2/CODE_SMELLS.md`, com **pelo menos 6 smells distintos** encontrados. Para cada smell:
 
-- Nome do smell (ex.: Long Method, Long Parameter List, Feature Envy,
-  Duplicated Code, Primitive Obsession, Data Clumps, Switch
-  Statements, Comentários redundantes, etc.).
+- Nome do smell (ex.: Long Method, Long Parameter List, Feature Envy, Duplicated Code, Primitive Obsession, Data Clumps, Switch Statements, Comentários redundantes, etc.).
 - Localização exata (`arquivo:linhas`).
 - Trecho de código (citado em fence ```python).
 - Explicação curta de **por que** é um smell naquele contexto.
@@ -53,53 +45,35 @@ do catálogo** para tratar nesta parte e proponha, para cada um:
 
 ### Tarefa 2.3 — Aplicação das refatorações (4,0 pontos)
 
-Aplique as 4 refatorações do plano em commits separados, cada um
-contendo:
+Aplique as 4 refatorações do plano em commits separados, cada um contendo:
 
-- Mensagem de commit no formato
-  `refactor(<escopo>): <transformação aplicada>` (ex.:
-  `refactor(forum): extract method de save_topic`).
+- Mensagem de commit no formato `refactor(<escopo>): <transformação aplicada>` (ex.: `refactor(forum): extract method de save_topic`).
 - Mudança pequena e focada — uma refatoração por commit.
 - Toda a suíte (`uv run pytest`) verde após o commit.
 
 Requisitos adicionais:
 
-- **Pelo menos uma** das 4 deve ser uma Extract Method ou Extract
-  Class aplicada a um dos métodos longos do hotspot.
+- **Pelo menos uma** das 4 deve ser uma Extract Method ou Extract Class aplicada a um dos métodos longos do hotspot.
 - **Pelo menos uma** deve eliminar duplicação de código real.
-- Nenhuma refatoração deve alterar o comportamento observável
-  testado pela suíte.
+- Nenhuma refatoração deve alterar o comportamento observável testado pela suíte.
 
-**Entrega:** sequência de 4 commits no fork de flaskbb + arquivo
-`parte2/REFATORACOES.md` (neste repositório) listando, para cada
-commit: hash, smell tratado, transformação aplicada e antes/depois
-resumido (pode citar trechos curtos).
+**Entrega:** sequência de 4 commits no fork de flaskbb + arquivo `parte2/REFATORACOES.md` (neste repositório) listando, para cada commit: hash, smell tratado, transformação aplicada e antes/depois resumido (pode citar trechos curtos).
 
 ---
 
 ### Tarefa 2.4 — Melhorias de legibilidade (2,0 pontos)
 
-Atue sobre o mesmo arquivo (ou um arquivo vizinho dentro do escopo)
-aplicando **pelo menos 3 melhorias de legibilidade** distintas,
+Atue sobre o mesmo arquivo (ou um arquivo vizinho dentro do escopo) aplicando **pelo menos 3 melhorias de legibilidade** distintas,
 cada uma de uma categoria diferente entre:
 
-- Nomenclatura (renomear variável/função/parâmetro para nome mais
-  expressivo, alinhado à linguagem ubíqua do domínio do fórum).
-- Estilo de código (formatação, ordem dos imports, quebra de
-  expressões compostas).
-- Tratamento de exceções (capturar exceção mais específica,
-  reescrever bloco `try/except` ruidoso, transformar retorno de
-  código em exceção quando apropriado).
-- Substituição de comentário redundante por código
-  autoexplicativo, ou eliminação de comentário desatualizado.
+- Nomenclatura (renomear variável/função/parâmetro para nome mais expressivo, alinhado à linguagem ubíqua do domínio do fórum).
+- Estilo de código (formatação, ordem dos imports, quebra de expressões compostas).
+- Tratamento de exceções (capturar exceção mais específica, reescrever bloco `try/except` ruidoso, transformar retorno de código em exceção quando apropriado).
+- Substituição de comentário redundante por código autoexplicativo, ou eliminação de comentário desatualizado.
 
-Cada melhoria deve estar em commit próprio com mensagem
-`refactor(<escopo>): <melhoria>` e ser registrada em
-`parte2/LEGIBILIDADE.md` com antes/depois e
-justificativa em 1–2 frases.
+Cada melhoria deve estar em commit próprio com mensagem `refactor(<escopo>): <melhoria>` e ser registrada em `parte2/LEGIBILIDADE.md` com antes/depois e justificativa em 1–2 frases.
 
-**Entrega:** commits no fork de flaskbb + arquivo
-`parte2/LEGIBILIDADE.md` (neste repositório).
+**Entrega:** commits no fork de flaskbb + arquivo `parte2/LEGIBILIDADE.md` (neste repositório).
 
 ---
 

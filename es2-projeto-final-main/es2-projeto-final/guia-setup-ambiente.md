@@ -59,10 +59,7 @@ O projeto adota `uv`. A partir da raiz do repositório:
 uv sync
 ```
 
-Esse comando cria o virtualenv `.venv/` e instala as dependências
-fixadas em `uv.lock`. Se preferir não usar `uv`, é possível usar o
-`requirements.txt` + `requirements-dev.txt` com `pip` em um
-virtualenv tradicional:
+Esse comando cria o virtualenv `.venv/` e instala as dependências fixadas em `uv.lock`. Se preferir não usar `uv`, é possível usar o `requirements.txt` + `requirements-dev.txt` com `pip` em um virtualenv tradicional:
 
 ```bash
 python -m venv .venv
@@ -90,16 +87,11 @@ Ou, usando o `Makefile`:
 make test
 ```
 
-A baseline esperada é **todos os testes passando**. Se algum teste
-falhar no seu ambiente, **registre o problema** (mensagem, sistema
-operacional, versão de Python, versão de dependências) e abra
-contato com o professor antes de prosseguir — não é esperado que
-você "conserte" testes do upstream nesta etapa.
+A baseline esperada é **todos os testes passando**. Se algum teste falhar no seu ambiente, **registre o problema** (mensagem, sistema operacional, versão de Python, versão de dependências) e abra contato com o professor antes de prosseguir — não é esperado que você "conserte" testes do upstream nesta etapa.
 
 ## 6. Execução da aplicação (opcional para a Parte 1)
 
-Não é necessário rodar o servidor para executar os testes, mas é
-útil para se familiarizar com o sistema:
+Não é necessário rodar o servidor para executar os testes, mas é útil para se familiarizar com o sistema:
 
 ```bash
 make devconfig    # gera configuração de desenvolvimento
@@ -109,8 +101,7 @@ make run          # sobe o servidor em http://localhost:5000
 
 ## 7. Cobertura de testes
 
-A Parte 1 do projeto pede metas de cobertura para um módulo
-específico. Para gerar relatório de cobertura:
+A Parte 1 do projeto pede metas de cobertura para um módulo específico. Para gerar relatório de cobertura:
 
 ```bash
 uv run pytest --cov=flaskbb --cov-report=term-missing
@@ -122,8 +113,7 @@ Para focar em um módulo (ex.: `flaskbb/forum/`):
 uv run pytest --cov=flaskbb.forum --cov-report=term-missing
 ```
 
-Anote a baseline (% de cobertura por módulo no início da Parte 1) —
-ela é o ponto de partida para definir a meta de incremento.
+Anote a baseline (% de cobertura por módulo no início da Parte 1) — ela é o ponto de partida para definir a meta de incremento.
 
 ## 8. Estrutura do código relevante
 

@@ -2,22 +2,11 @@
 
 ## Contexto
 
-O `flaskbb` é um software de fórum em Python/Flask, organizado em
-categorias → fóruns → tópicos → posts, com painel de administração,
-sistema de permissões por grupo e suíte de testes existente. O
-código vive em https://github.com/flaskbb/flaskbb. Para a disciplina,
-você trabalha sobre o fork didático
-`https://github.com/jeffsantos/flaskbb`.
+O `flaskbb` é um software de fórum em Python/Flask, organizado em categorias → fóruns → tópicos → posts, com painel de administração, sistema de permissões por grupo e suíte de testes existente. O código vive em https://github.com/flaskbb/flaskbb. Para a disciplina, você trabalha sobre o fork didático: `https://github.com/jeffsantos/flaskbb`.
 
-Seu papel nas 3 partes do projeto é o de um **mantenedor que acaba
-de assumir o sistema**: você precisa entender o código existente,
-aumentar sua confiança via testes, melhorar sua estrutura e
-documentar o caminho de evolução. Esta primeira parte foca em
-**conhecer o sistema e fortalecer sua suíte de testes**.
+Seu papel nas 3 partes do projeto é o de um **mantenedor que acaba de assumir o sistema**: você precisa entender o código existente, aumentar sua confiança via testes, melhorar sua estrutura e documentar o caminho de evolução. Esta primeira parte foca em **conhecer o sistema e fortalecer sua suíte de testes**.
 
-Antes de começar, siga o
-[`guia-setup-ambiente.md`](guia-setup-ambiente.md) e confirme que a
-baseline de testes está 100% verde.
+Antes de começar, siga o [`guia-setup-ambiente.md`](guia-setup-ambiente.md) e confirme que a baseline de testes está 100% verde.
 
 ---
 
@@ -25,13 +14,9 @@ baseline de testes está 100% verde.
 
 ### Tarefa 1.1 — Setup do ambiente e baseline de testes (2,0 pontos)
 
-- Fork de `jeffsantos/flaskbb` (individual ou da dupla), clone local
-  e configuração do `uv`/virtualenv conforme o guia.
-- Execução de `uv run pytest` com 100% de sucesso, evidenciada por
-  um print/saída salvo em `parte1/BASELINE.md`.
-- Geração de relatório de cobertura por módulo para
-  `flaskbb/forum/`, `flaskbb/management/` e `flaskbb/user/`,
-  registrando os valores iniciais no mesmo arquivo.
+- Fork de `jeffsantos/flaskbb` (individual ou da dupla), clone local e configuração do `uv`/virtualenv conforme o guia.
+- Execução de `uv run pytest` com 100% de sucesso, evidenciada por um print/saída salvo em `parte1/BASELINE.md`.
+- Geração de relatório de cobertura por módulo para `flaskbb/forum/`, `flaskbb/management/` e `flaskbb/user/`, registrando os valores iniciais no mesmo arquivo.
 
 **Entrega:** arquivo `parte1/BASELINE.md` neste repositório
 (inclua no arquivo o link do seu fork de flaskbb).
@@ -40,19 +25,14 @@ baseline de testes está 100% verde.
 
 ### Tarefa 1.2 — Escolha do módulo-alvo e meta de cobertura (1,0 ponto)
 
-Escolha **um único módulo** entre `flaskbb/forum/`, `flaskbb/management/`
-e `flaskbb/user/` para ser o alvo das tarefas seguintes.
+Escolha **um único módulo** entre `flaskbb/forum/`, `flaskbb/management/` e `flaskbb/user/` para ser o alvo das tarefas seguintes.
 
 Em `parte1/PLANO_TESTES.md`, registre:
 
 - Módulo escolhido e justificativa breve (1–2 parágrafos).
 - Cobertura atual do módulo (linhas/branches).
-- Meta concreta de incremento (ex.: "+15 pontos percentuais de
-  cobertura de linhas" ou "cobrir todas as funções de
-  `forum/views.py` com mais de 5 ramos").
-- Lista inicial de **cenários ainda não cobertos** que você
-  pretende atacar (mínimo 6 itens, marcando quais são caminhos
-  felizes e quais são bordas/erros).
+- Meta concreta de incremento (ex.: "+15 pontos percentuais de cobertura de linhas" ou "cobrir todas as funções de `forum/views.py` com mais de 5 ramos").
+- Lista inicial de **cenários ainda não cobertos** que você pretende atacar (mínimo 6 itens, marcando quais são caminhos felizes e quais são bordas/erros).
 
 **Entrega:** arquivo `parte1/PLANO_TESTES.md` neste repositório.
 
@@ -83,17 +63,11 @@ caso, arquivo/linha e tipo (feliz, borda, erro).
 
 ### Tarefa 1.4 — Testes parametrizados (1,5 pontos)
 
-Inclua **pelo menos 1 teste parametrizado** (usando
-`pytest.mark.parametrize`) cobrindo ao menos 4 combinações de
-entrada relevantes do módulo escolhido (ex.: validação de slug de
-fórum, regras de visibilidade de tópico, contagem de tópicos não
-lidos por usuário).
+Inclua **pelo menos 1 teste parametrizado** (usando `pytest.mark.parametrize`) cobrindo ao menos 4 combinações de entrada relevantes do módulo escolhido (ex.: validação de slug de fórum, regras de visibilidade de tópico, contagem de tópicos não lidos por usuário).
 
-Requisito de qualidade: as combinações devem incluir tanto entradas
-válidas quanto inválidas.
+Requisito de qualidade: as combinações devem incluir tanto entradas válidas quanto inválidas.
 
-**Entrega:** commit do teste no fork de flaskbb + referência ao
-arquivo em `parte1/NOVOS_TESTES.md` (neste repositório).
+**Entrega:** commit do teste no fork de flaskbb + referência ao arquivo em `parte1/NOVOS_TESTES.md` (neste repositório).
 
 ---
 
@@ -132,12 +106,9 @@ Ao final da Parte 1:
 
 - Gere novo relatório de cobertura para o módulo-alvo.
 - Compare com a baseline da Tarefa 1.1 e com a meta da Tarefa 1.2.
-- Liste, em `parte1/COBERTURA_FINAL.md`, os cenários
-  que **continuam descobertos** e uma sugestão de como cobri-los
-  futuramente (sem precisar implementar).
+- Liste, em `parte1/COBERTURA_FINAL.md`, os cenários que **continuam descobertos** e uma sugestão de como cobri-los futuramente (sem precisar implementar).
 
-**Entrega:** arquivo `parte1/COBERTURA_FINAL.md` neste
-repositório.
+**Entrega:** arquivo `parte1/COBERTURA_FINAL.md` neste repositório.
 
 ---
 
